@@ -14,7 +14,11 @@ array = [random.randint(MIN_ITEM, MAX_ITEM) for _ in range(SIZE)]
 print(f'Исходный массив: {array}')
 
 # решение задачи
-max_negative_num = MIN_ITEM
+max_negative_num = 0
+for item in array:
+    if item < max_negative_num:
+        max_negative_num = item
+
 max_negative_num_ind = 0
 
 for i in range(len(array)):

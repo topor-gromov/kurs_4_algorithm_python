@@ -2,7 +2,6 @@
 Задание 9:
 Найти максимальный элемент среди минимальных элементов столбцов матрицы.
 """
-
 # постановка задачи
 import random
 
@@ -14,8 +13,9 @@ matrix = [[random.randint(MIN_ITEM, MAX_ITEM) for _ in range(SIZE_N)] for _ in r
 
 # решение задачи
 STEP = 5
-min_column = [MAX_ITEM] * len(matrix[0])
-print(f'Исходная матрица {SIZE_N}x{SIZE_M}:')
+min_column = matrix[0]
+
+print(f'Исходная матрица:')
 
 for line in matrix:
     for i, item in enumerate(line):
@@ -25,7 +25,8 @@ for line in matrix:
     print()
 print(f'Массив минимальных значений в столбцах матрицы:')
 
-max_elem = MIN_ITEM
+max_elem = min_column[0]
+
 for item in min_column:
     if item > max_elem:
         max_elem = item

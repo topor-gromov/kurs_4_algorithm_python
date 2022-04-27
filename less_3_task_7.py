@@ -13,8 +13,8 @@ array = [random.randint(MIN_ITEM, MAX_ITEM) for _ in range(SIZE)]
 print(f'Исходный массив: {array}')
 
 # решение задачи
-min_elem_1 = MAX_ITEM
-min_elem_2 = MAX_ITEM
+min_elem_1 = array[0]
+min_elem_2 = array[0]
 flag_find_min = False
 
 for i in range(len(array)):
